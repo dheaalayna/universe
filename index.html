@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(n12.jfif)
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background overlay */
+            background-blend-mode: overlay;
+            overflow: hidden;
+        }
+        .container {
+            font-size: 10px;
+            width: 50em;
+            height: 50em;
+            position: relative;
+        }
+        .home-content h3 {
+            font-size: 36px; 
+            font-weight: 700;
+            line-height: 1.4;
+            color: #f7e7ce; 
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-align: center; /* Center aligned */
+        }
+        .sun {
+            position: absolute;
+            top: 12em;
+            left: 12em;
+            width: 12em;
+            height: 12em;
+            background-color: antiquewhite;
+            border-radius: 50%;
+            box-shadow: 0 0 4em white;
+        }
+        .earth, .moon {
+            position: absolute;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+            border-width: 0.1em 0.1em 0 0;
+            border-radius: 50%;
+        }
+        .earth {
+            top: 4em;
+            left: 4em;
+            width: 35em;
+            height: 35em;
+            animation: orbit 36.5s linear infinite;
+        }
+        .moon {
+            top: 0;
+            right: 0;
+            width: 10em;
+            height: 10em;
+            animation: orbit 2.7s linear infinite;
+        }
+        .earth::before,
+        .moon::before {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+        }
+        .earth::before {
+            top: 3.5em;
+            right: 3.5em;
+            width: 4em;
+            height: 4em;
+            background-color: darkseagreen;
+        }
+        .moon::before {
+            top: 1em;
+            right: 0.3em;
+            width: 1.5em;
+            height: 1.5em;
+            background-color: darkgrey;
+        }
+        @keyframes orbit {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <title>Space Design</title>
+</head>
+<body>
+  
+    <audio autoplay loop>
+        <source src="1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <section class="home">
+        <div class="container">
+            <div class="home-content">
+                <h3>DHEA ALAYNA SOFEA BINTI ABDULLAH</h3>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+    </div>
+</body>
+</html>
